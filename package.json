@@ -1,0 +1,31 @@
+{
+  "name": "tailwind-plugin-progress-variant",
+  "version": "1.0.0",
+  "description": "tailwind plugin: adds progress bar and progress value variant",
+  "main": "src/index.js",
+  "author": "jcaillot <jerome@chaman.ca>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcaillot/tailwind-plugin-progress-variant.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/jcaillot/tailwind-plugin-progress-variant/issues"
+  },
+  "homepage": "https://github.com/jcaillot/tailwind-plugin-progress-variant",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "jest": "^29.7.0",
+    "jest-matcher-css": "^1.1.0",
+    "path": "^0.12.7",
+    "postcss": "^8.4.30",
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.3"
+  }
+}
