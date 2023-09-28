@@ -4,6 +4,35 @@ const progress = require('./index.js')
 const path = require("path");
 
 
+describe('progress', () => {
+
+  const expectedOutput = `
+    .progress-bar\\:bg-black ::-webkit-progress-bar {
+      --tw-bg-opacity: 1;
+      background-color: rgb(0 0 0 / var(--tw-bg-opacity))
+    }
+    .progress-bar\\:bg-black  {
+      --tw-bg-opacity: 1;
+      background-color: rgb(0 0 0 / var(--tw-bg-opacity))
+    }
+    .progress-value\\:bg-white::-webkit-progress-value {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+    }
+    .progress-value\\:bg-white::-moz-progress-bar {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+    }
+`;
+
+  it('generates the expected class', async () => {
+    willRunTailwindCss().then((css) => {
+      expect(css).toContainCss(expectedOutput)
+    });
+  })
+});
+
+
 const willRunTailwindCss = () => {
   const {currentTestName, testPath} = expect.getState();
   return postcss(tailwindcss({
@@ -34,31 +63,3 @@ expect.extend({
     }
   },
 })
-
-describe('progress', () => {
-
-  const expectedOutput = `
-    .progress-bar\\:bg-black ::-webkit-progress-bar {
-      --tw-bg-opacity: 1;
-      background-color: rgb(0 0 0 / var(--tw-bg-opacity))
-    }
-    .progress-bar\\:bg-black  {
-      --tw-bg-opacity: 1;
-      background-color: rgb(0 0 0 / var(--tw-bg-opacity))
-    }
-    .progress-value\\:bg-white::-webkit-progress-value {
-      --tw-bg-opacity: 1;
-      background-color: rgb(255 255 255 / var(--tw-bg-opacity))
-    }
-    .progress-value\\:bg-white::-moz-progress-bar {
-      --tw-bg-opacity: 1;
-      background-color: rgb(255 255 255 / var(--tw-bg-opacity))
-    }
-`;
-
-  it('generates the expected class', async () => {
-    willRunTailwindCss().then((css) => {
-      expect(css).toContainCss(expectedOutput)
-    });
-  })
-});
