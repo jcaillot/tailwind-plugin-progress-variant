@@ -2,35 +2,6 @@
 
 A Tailwind plugin for adding a progress bar variant
 
-## Installation
-
-Install the plugin from npm:
-
-```shell
-npm install -D tailwind-plugin-progress-variant
-```
-
-or
-
-```shell
-yarn add -D tailwind-plugin-progress-variant
-```
-
-Then add the plugin to your tailwind.config.js file:
-
-```JavaScript
-
-// tailwind.config.js
-module.exports = {
-  theme: {
-    // ...
-  },
-  plugins: [
-    require('tailwind-plugin-progress-variant'),
-    // ...
-  ],
-}
-```
 
 ## Installation
 
@@ -73,7 +44,7 @@ After Tailwind CSS reset:
 
 ![reset](img/tailwindcss-reset.png)
 
-After adding classes using progress variant:
+After adding custom TW classes using progress variant:
 
 ![style](img/styles.png)
 
