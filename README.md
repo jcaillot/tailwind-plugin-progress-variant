@@ -1,7 +1,10 @@
 # jcaillot/tailwind-plugin-progress-variant
 
-A Tailwind plugin for adding a progress bar variant
+A TailwindCSS plugin for adding a progress bar variant
 
+![Static Badge](https://img.shields.io/badge/TailwindCSS-plugin-blue)
+
+![GitHub](https://img.shields.io/github/license/jcaillot/tailwind-plugin-progress-variant)
 
 ## Installation
 
